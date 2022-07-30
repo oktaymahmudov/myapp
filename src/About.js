@@ -1,16 +1,25 @@
-import React from 'react';
-// import img1 from './img/img1.jpg';
-import  './Home.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+import { LinkContainer } from 'react-router-bootstrap';
 
-const About = () => {
+
+function About() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <div className='img3'>
-        {/* <img className='w-100' src={img1} /> */}
-      </div>
-    </div>
-  )
+    <Navbar bg="dark" variant='dark' expand="lg">
+      <Container>
+        <Nav className='mx-auto w-50 justify-content-center'>
+          <LinkContainer to="/signin">
+            <Nav.Link>Sign In</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/signup">
+            <Nav.Link>Sign Up</Nav.Link>
+          </LinkContainer>
+        </Nav>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default About
+export default About;
